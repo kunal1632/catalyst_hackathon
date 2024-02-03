@@ -1,4 +1,4 @@
-# SkillSwapHub
+# SkillFlow
 
 ## Team
 
@@ -28,7 +28,7 @@
 
 ## Idea Description
 
-SkillSwapHub is a dynamic web application designed to foster collaborative learning and knowledge exchange within a vibrant community. The platform addresses the challenges of fragmented skill acquisition by providing a centralized space for users to seamlessly share and acquire skills. Users can explore skills, document learning journeys, and connect with others who share similar interests. SkillSwapHub aims to create a rich tapestry of shared knowledge, empowering individuals to thrive together in a culture of continuous learning.
+SkillFlow is a dynamic web application designed to foster collaborative learning and knowledge exchange within a vibrant community. The platform addresses the challenges of fragmented skill acquisition by providing a centralized space for users to seamlessly share and acquire skills. Users can explore skills, document learning journeys, and connect with others who share similar interests. SkillSwapHub aims to create a rich tapestry of shared knowledge, empowering individuals to thrive together in a culture of continuous learning.
 
 ## How to Run the Project
 
