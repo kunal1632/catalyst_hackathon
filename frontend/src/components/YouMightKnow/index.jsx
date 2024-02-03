@@ -5,8 +5,6 @@ import styled from 'styled-components';
 
 const YouMightKnowContainer = styled.div`
   background-color: #fff;
-  width: 260px;
-  height: 234px;
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 16px;
