@@ -1,0 +1,27 @@
+.profile-tabs {
+    padding: 12px 44px;
+    border-bottom: 0.6px solid #030229;
+}
+
+.profile-tab {
+    color: #A303A0;
+    font-size: 15px;
+    position: relative;
+    padding: 4px 0;
+}
+
+.profile-tab.active {
+    font-weight: 800;
+}
+
+.profile-tab.active::after {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #FBB03B;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
