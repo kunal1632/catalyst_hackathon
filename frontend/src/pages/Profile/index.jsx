@@ -2,15 +2,32 @@ import React from 'react'
 import { PostList } from '../../components/PostList'
 import { ProfileTabs } from '../../components/ProfileTabs'
 import NavBar from "../../components/NavBar";
+import Sidebar from '../../components/Sidebar';
 
 export const Profile = () => {
   return (
-    <div>
-            <div>
-        <NavBar />
+    <div className='main-grid'>
+      <div className='grid-area-sidebar'>
+        <Sidebar />
       </div>
-      <ProfileTabs />
-      <PostList />
+      <div className='inner-grid'>
+        <div className='grid-area-b'>
+          <NavBar />
+        </div>
+        <div className='grid-area-c'>
+          <NavBar />
+        </div>
+        <div className='grid-area-d'>
+          <PostList />
+        </div>
+        <div className='grid-area-e'>
+          <ProfileTabs />
+          <PostList />
+        </div>
+        <div className='grid-area-f'>
+          <PostList />
+        </div>
+      </div>
     </div>
   )
 }
