@@ -3,6 +3,7 @@ import { useState } from "react";
 import { toast } from "react-hot-toast";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 // import { useNavigate } from "react-router-dom";
+import { FcGoogle } from "react-icons/fc";
 import axios from 'axios';
 
 const SignUp = () => {
@@ -76,7 +77,7 @@ const SignUp = () => {
                 <div className="flex gap-x-4 mt-[10px]">
                     <label className="w-full text-[0.875rem] text-black mb-1 leading-[1.375rem]">
                         <p className="font-bold">
-                            Name<sup className="text-pink-200">*</sup>
+                            First Name<sup className="text-pink-200">*</sup>
                         </p>
 
                         <input
@@ -85,6 +86,22 @@ const SignUp = () => {
                         name="Name"
                         onChange={changeHandler}
                         placeholder="Enter First Name"
+                        value={formData.firstName}
+                        className="bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]"
+                        />
+
+                    </label>
+                    <label className="w-full text-[0.875rem] text-black mb-1 leading-[1.375rem]">
+                        <p className="font-bold">
+                            Last Name<sup className="text-pink-200">*</sup>
+                        </p>
+
+                        <input
+                        required
+                        type="text"
+                        name="Name"
+                        onChange={changeHandler}
+                        placeholder="Enter Last Name"
                         value={formData.firstName}
                         className="bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]"
                         />
@@ -158,6 +175,16 @@ const SignUp = () => {
                   onClick={submitHandler}
                   className="bg-orange text-richblack-900 rounded-xl font-medium px-[12px] py-[8px] mt-6">
                     Create Account
+                </button>
+                <div className="flex w-full items-center my-4 gap-x-2">
+                    <div className="w-full h-[1px] bg-richblack-700"></div>
+                    <p className="text-richblack-700 font-medium leading[1.375rem]">OR</p>
+                    <div className="w-full h-[1px] bg-richblack-700"></div>
+                </div>
+                <button className="w-full flex justify-center item-center rounded-[8px] font-medium text-black 
+                bg-orange border border-richblack-700 px-[12px] py-[8px] gap-x-2 mt-6 ">
+                    <FcGoogle />
+                    <p>Sign up with Google</p>
                 </button>
 
             </form>
