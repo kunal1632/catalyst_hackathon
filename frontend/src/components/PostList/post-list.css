@@ -1,7 +1,3 @@
 .post-list .post-container {
     margin-bottom: 8px;
 }
-.post-list{
-    max-height: 700px;
-    overflow: scroll;
-}
