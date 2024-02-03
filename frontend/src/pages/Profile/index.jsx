@@ -1,7 +1,12 @@
-import React from 'react'
+import React from "react";
+import NavBar from "../../components/NavBar";
 
 export const Profile = () => {
   return (
-    <div>Profile</div>
-  )
-}
+    <div>
+      <div>
+        <NavBar />
+      </div>
+    </div>
+  );
+};

@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import SearchBar from "./SearchBar";
+import ProfileIcon from "./ProfileIcon";
 
-const index = () => {
+const NavBar = () => {
   return (
-    <div>
-      
+    <div className="flex w-full justify-between py-5 px-5">
+      <SearchBar />
+      <ProfileIcon />
     </div>
-  )
-}
+  );
+};
 
-export default index
+export default NavBar;
