@@ -4,7 +4,7 @@ import ProfileIcon from "./ProfileIcon";
 
 const NavBar = () => {
   return (
-    <div className="flex w-full justify-between py-5 px-5">
+    <div className="flex w-full justify-between ">
       <SearchBar />
       <ProfileIcon />
     </div>

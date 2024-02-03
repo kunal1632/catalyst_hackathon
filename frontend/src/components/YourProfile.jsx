@@ -4,7 +4,7 @@ const YourProfile = () => {
   const name = "Kunal Dhand";
   const skills = "DSA MERN";
   return (
-    <div className="flex flex-col justify-between bg-white mx-5 rounded-lg">
+    <div className="flex flex-col justify-between bg-white rounded-lg">
       <div className="flex  relative">
         <img src="coverPhoto.png" className="w-full"></img>
         <button className="absolute bg-white text-LightPurple px-[1rem] py-[0.5rem] rounded-lg outline-none bottom-7 right-7 hover:scale-110 hover:opacity-95 transition-all duration-150 border border-LightPurple">
