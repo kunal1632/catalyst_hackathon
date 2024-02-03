@@ -12,7 +12,7 @@ const LoginSignupPage = () => {
 
 
   return (
-    <div className='max-w-xl mx-auto justify-between '>
+    <div className='bg-LightPurple max-w-xl mx-auto justify-between '>
       <div className='flex justify-center bg-darkPurple  w-[100%] mt-[30px]  mb-[15px] h-[150px] border-none shadow-2xl rounded-full'>
         {/* <img src={Logo} alt='' width={500} height={400} className='object-cover'/> */}
       </div>
@@ -23,8 +23,8 @@ const LoginSignupPage = () => {
           onClick={() => setUserType("login")}
           className={`${
             userType === "login"
-            ?("bg-purple")
-            :("bg-darkPurple")
+            ?("bg-orange")
+            :("bg-LightPurple")
           } w-[50%] h-[100%] rounded-full text-black font-bold text-xl p-3 `}
           >
             Log In
@@ -34,8 +34,8 @@ const LoginSignupPage = () => {
             onClick={() => setUserType("signup")}
           className={`${
             userType === "signup"
-            ?("bg-purple")
-            :("bg-darkPurple")
+            ?("bg-orange")
+            :("bg-LightPurple")
           } w-[50%] h-[100%] rounded-full text-black font-bold text-xl p-3 `}>
             Sign Up
           </button>

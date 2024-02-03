@@ -101,7 +101,7 @@ const LogIn = () => {
 
             <button
             onClick={submitHandler} 
-            className="bg-purple text-richblack-900 rounded-xl font-medium px-[12px] py-[8px] mt-6">
+            className="bg-orange text-richblack-900 rounded-xl font-medium px-[12px] py-[8px] mt-6">
                 Sign In
             </button>
 
