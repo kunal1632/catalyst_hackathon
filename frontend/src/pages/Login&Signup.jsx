@@ -6,7 +6,6 @@ import SignUp from '../components/Signup/index';
 import "./Login&Signup.css";
 
 
-
 const LoginSignupPage = () => {
 
   const [userType, setUserType] = useState("login");

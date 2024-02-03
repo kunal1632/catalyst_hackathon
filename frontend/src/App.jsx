@@ -7,6 +7,7 @@ import { Contact } from "./pages/Contact";
 import { About } from "./pages/About";
 import LoginSignupPage from "./pages/Login&Signup";
 import { Home } from "./pages/Home";
+import Chats from "./pages/Message"
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <Home />,
+  },
+  {
+    path: "/chats",
+    element: <Chats />,
   },
 ]);
 
