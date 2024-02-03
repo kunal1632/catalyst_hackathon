@@ -61,21 +61,21 @@ One of the critical parts of our codebase is the integration with Firebase. Fire
 
     ```javascript
     // Firebase configuration
-const firebaseConfig = {
-  apiKey: 'your-api-key',
-  authDomain: 'your-auth-domain',
-  projectId: 'your-project-id',
-  storageBucket: 'your-storage-bucket',
-  messagingSenderId: 'your-messaging-sender-id',
-  appId: 'your-app-id',
-};
+    const firebaseConfig = {
+    apiKey: 'your-api-key',
+    authDomain: 'your-auth-domain',
+    projectId: 'your-project-id',
+    storageBucket: 'your-storage-bucket',
+    messagingSenderId: 'your-messaging-sender-id',
+    appId: 'your-app-id',
+    };
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
 
-// Access Firestore
-const db = firebase.firestore();
-```    
+    // Access Firestore
+    const db = firebase.firestore();
+
 
 
 ## Team Mates Details
