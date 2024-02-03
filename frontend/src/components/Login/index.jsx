@@ -3,6 +3,7 @@ import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import axios from 'axios';
+import { FcGoogle } from "react-icons/fc";
 
 const LogIn = () => {
 
@@ -103,6 +104,16 @@ const LogIn = () => {
             onClick={submitHandler} 
             className="bg-orange text-richblack-900 rounded-xl font-medium px-[12px] py-[8px] mt-6">
                 Sign In
+            </button>
+            <div className="flex w-full items-center my-4 gap-x-2">
+                <div className="w-full h-[1px] bg-richblack-700"></div>
+                <p className="text-richblack-700 font-medium leading[1.375rem]">OR</p>
+                <div className="w-full h-[1px] bg-richblack-700"></div>
+            </div>
+            <button className="w-full flex justify-center item-center rounded-[8px] font-medium text-black 
+            bg-orange border border-richblack-700 px-[12px] py-[8px] gap-x-2 mt-6 ">
+                <FcGoogle />
+                <p>Sign up with Google</p>
             </button>
 
         </form>

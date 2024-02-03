@@ -5,8 +5,6 @@ import styled from 'styled-components';
 // Styled components for enhanced styling
 const AboutContainer = styled.div`
   background-color: #fff;
-  width: 236px;
-  height: 307px;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;

@@ -9,7 +9,7 @@ const ProfileIcon = () => {
         <br></br>
         <button className="font-normal">Log out</button>
       </div>
-      <img src="profilePhoto.png"></img>
+      <img src="profilePhoto.png" height={60} width={60} className="navbar-avatar"></img>
     </div>
   );
 };
