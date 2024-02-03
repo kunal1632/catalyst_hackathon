@@ -1,0 +1,53 @@
+html,
+body,
+#root {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-LightPurple {
+  background-color: LightPurple;
+  /* Replace with your desired color value */
+}
+
+/* Additional styles for the content if needed */
+.main-grid {
+  display: grid;
+  grid-template-columns: 270px auto;
+  grid-template-areas:
+    "s i "
+    "s i";
+  background-color: #e5e5e5;
+}
+
+.inner-grid {
+  display: grid;
+  grid-area: i;
+  grid-template-areas:
+    "b b b b"
+    "c c c c ";
+}
+
+.grid-area-sidebar {
+  grid-area: s;
+  width: 250px;
+  height: min-content;
+  position: sticky;
+  top: 0;
+}
+
+.grid-area-b {
+  grid-area: b;
+  max-width: 100%;
+  margin: 20px 20px 0 0;
+  border-radius: 10px;
+}
+
+.grid-area-c {
+  grid-area: c;
+  height: fit-content;
+  margin: 20px 0 0 0;
+  border-radius: 10px;
+  background-color: #fff;
+}

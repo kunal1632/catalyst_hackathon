@@ -14,6 +14,7 @@ import { Contact } from "./pages/Contact";
 import { About } from "./pages/About";
 import LoginSignupPage from "./pages/Login&Signup";
 import Spinner from "./components/Spinner/Spinner";
+import EditProfile from "./pages/EditProfile";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCyqmu8JIZwO8VhOlvBUgNI7VaLlbZgufM",
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/edit-profile",
+    element: <EditProfile />,
   },
 ]);
 
