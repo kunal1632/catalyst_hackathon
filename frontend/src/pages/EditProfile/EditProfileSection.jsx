@@ -1,3 +1,4 @@
+import { MdEdit } from "react-icons/md";
 import React, { useState } from "react";
 
 const EditProfileSection = () => {
@@ -21,12 +22,21 @@ const EditProfileSection = () => {
     }));
     console.log(formData.skills);
   }
+  function dpChangeHandler() {}
   function submitHandler() {}
 
   return (
     <div className="flex  bg-[#e5e5e5] flex-col ">
       <div className="flex relative bg-white rounded-md m-5">
-        <img className="p-5" src="displayPhoto.png"></img>
+        <div className="relative">
+          <button
+            onClick={dpChangeHandler}
+            className="absolute bottom-9 right-10 bg-white rounded-full p-2 shadow-xl"
+          >
+            <MdEdit className="scale-125" />
+          </button>
+          <img className="p-5" src="displayPhoto.png"></img>
+        </div>
         <div className="flex flex-col justify-center ml-5">
           <p className="font-bold text-LightPurple text-xl">
             {formData.userName}
