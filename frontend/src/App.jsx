@@ -4,16 +4,17 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import { Home } from './pages/Home';
+// import { Home } from './pages/Home';
 import { Profile } from './pages/Profile';
 import { Contact } from './pages/Contact';
 import { About } from './pages/About';
+import LoginSignupPage from './pages/Login&Signup';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <LoginSignupPage />,
   },
   {
     path: "/about/",
@@ -32,6 +33,9 @@ const router = createBrowserRouter([
 
 export const App = () => {
   return (
-    <RouterProvider router={router} />
+    <div class>
+      <RouterProvider router={router} />
+    </div>
+    
   )
 }
