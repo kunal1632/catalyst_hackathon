@@ -1,0 +1,79 @@
+html,
+body,
+#root {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#profile.bg-LightPurple {
+  background-color: LightPurple;
+  /* Replace with your desired color value */
+}
+
+/* Additional styles for the content if needed */
+
+#profile.main-grid {
+  display: grid;
+  grid-template-areas:
+    "s i i"
+    "s i i"
+    "s i i";
+  background-color: #e5e5e5;
+}
+
+#profile .inner-grid {
+  display: grid;
+  grid-template-areas:
+    "b b b b"
+    "c c c c"
+    "e e e f";
+}
+
+#profile .grid-area-sidebar {
+  grid-area: s;
+  width: 250px;
+  height: min-content;
+  position: sticky;
+  top: 0;
+}
+
+#profile .grid-area-b {
+  grid-area: b;
+  max-width: 100%;
+  margin: 20px 20px 0 20px;
+  border-radius: 10px;
+}
+
+#profile .grid-area-c {
+  grid-area: c;
+  margin: 20px 20px 0 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  margin: 20px 20px 0 20px;
+}
+
+#profile .grid-area-d {
+  grid-area: d;
+  border-radius: 10px;
+  margin: 20px;
+  height: min-content;
+  position: sticky;
+  top: 20px;
+}
+
+#profile .grid-area-e {
+  grid-area: e;
+  border-radius: 10px;
+  margin: 20px 0 20px 20px;
+  background-color: #fff;
+}
+
+#profile .grid-area-f {
+  grid-area: f;
+  border-radius: 10px;
+  margin: 20px;
+  height: min-content;
+  position: sticky;
+  top: 20px;
+}

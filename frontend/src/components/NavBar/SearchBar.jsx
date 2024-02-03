@@ -21,7 +21,10 @@ const SearchBar = () => {
   }
   return (
     <div className="bg-white w-full rounded-lg h-[55px] flex items-center mr-5">
-      <form className="flex items-center gap-4 px-5" onSubmit={submitHandler}>
+      <form
+        className="flex items-center gap-4 px-5 flex-grow"
+        onSubmit={submitHandler}
+      >
         <label htmlFor="search">
           <img src="/searchIcon.svg" width={20}></img>
         </label>
@@ -32,7 +35,7 @@ const SearchBar = () => {
           placeholder="Search"
           value={formData.search}
           onChange={changeHandler}
-          className="outline-none placeholder-purple w-full"
+          className="outline-none grow placeholder-purple w-full"
         ></input>
       </form>
     </div>

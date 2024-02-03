@@ -7,10 +7,11 @@ import { ProfileTabs } from "../../components/ProfileTabs";
 import NavBar from "../../components/NavBar";
 import YourProfile from "../../components/YourProfile";
 import Sidebar from "../../components/Sidebar";
+import "./style.css";
 
 export const Profile = () => {
   return (
-    <div className="main-grid">
+    <div className="main-grid " id="profile">
       <div className="grid-area-sidebar">
         <Sidebar />
       </div>
@@ -21,16 +22,15 @@ export const Profile = () => {
         <div className="grid-area-c">
           <YourProfile />
         </div>
-        <div className="grid-area-d">
-          <About />
-        </div>
         <div className="grid-area-e">
           <ProfileTabs />
           <PostList />
         </div>
         <div className="grid-area-f">
+          <About />
+          <div className="mt-4" />
+
           <YouMightKnow />
-          <Active />
         </div>
         <div></div>
       </div>

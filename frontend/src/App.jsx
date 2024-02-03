@@ -1,10 +1,14 @@
 import React, { useState } from "react";
-import { createBrowserRouter, useNavigate, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  useNavigate,
+  RouterProvider,
+} from "react-router-dom";
 import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
-import { AuthProvider } from './hooks/useAuth';
-import { Home } from './pages/Home';
+import { AuthProvider } from "./hooks/useAuth";
+import { Home } from "./pages/Home";
 import { Profile } from "./pages/Profile";
 import { Contact } from "./pages/Contact";
 import { About } from "./pages/About";
@@ -16,7 +20,7 @@ const firebaseConfig = {
   projectId: "catalyst-c59d7",
   storageBucket: "catalyst-c59d7.appspot.com",
   messagingSenderId: "116923088446",
-  appId: "1:116923088446:web:35d3e0df15635e9451db6f"
+  appId: "1:116923088446:web:35d3e0df15635e9451db6f",
 };
 
 const router = createBrowserRouter([
@@ -60,11 +64,10 @@ export const App = () => {
     }
   });
 
-  if (loading)
-    return <div>Loading...</div>
+  if (loading) return <div>Loading...</div>;
 
   return (
-    <div className="bg-[#a0a0a5] h-screen">
+    <div>
       <AuthProvider>
         <RouterProvider router={router} />
       </AuthProvider>
