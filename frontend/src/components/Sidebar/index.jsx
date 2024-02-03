@@ -6,7 +6,7 @@ const Sidebar = () => {
         <div className=''>
             <img src="logo.png" width={200} height={50}className='' alt="" />
         </div>
-        <ul className='flex flex-col justify-center items-center pt-10 gap-16'>
+        <ul className='flex flex-col justify-center items-center pt-10 gap-10'>
             <div className='flex flex-row gap-5 mr-5 cursor-pointer '>
                 <img src="HomeIcon.svg" width={20} height={20} alt="" />
                 <li className='text-white font-bold hover:text-orange transition-all duration-200'>Home</li>
