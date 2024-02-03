@@ -61,20 +61,18 @@ body,#root {
 .grid-area-d {
     grid-area: d;
     border-radius: 10px;
-    background-color: #fff;
     margin: 20px;
 }
 
 .grid-area-e {
     grid-area: e;
     border-radius: 10px;
-    background-color: #fff;
     margin: 20px 0;
+    background-color: #fff;
 }
 
 .grid-area-f {
     grid-area: f;
     border-radius: 10px;
-    background-color: #fff;
     margin: 20px;
 }
