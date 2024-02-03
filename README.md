@@ -3,27 +3,27 @@
 ## Team
 
 - **Ayush Munot**
-  - *Role:* 
+  - *Role:* Full-stack Developer 
   - *Contributions:* 
 
 - **Kunal Dhand**
-  - *Role:* 
+  - *Role:* Frontend Developer
   - *Contributions:* 
 
 - **Lakshay Tyagi**
-  - *Role:* 
+  - *Role:* Frontend Developer
   - *Contributions:* 
 
 - **Shashank Gulati**
-  - *Role:* 
-  - *Contributions:* .
+  - *Role:* Backend Developer
+  - *Contributions:* 
 
 ## Tech Used
 
 - **Frontend:** React.js
-- **Backend:** Node.js with Express.js
-- **Database:** MongoDB (NoSQL)
-- **Deployment:** Heroku
+- **Backend:** Firebase
+- **Database:** Firestore 
+- **Deployment:** GitHub Pages
 - **Version Control:** Git and GitHub
 
 ## Idea Description
@@ -53,20 +53,45 @@ The application will be accessible at http://localhost:3000.
 
 [SkillFlow - Live Demo]()
 
+## Explain the Core Code
+
+One of the critical parts of our codebase is the integration with Firebase. Firebase serves as the backend, and Firestore is used as a NoSQL database to store skills, user information, and other relevant data. React.js powers the frontend, providing a dynamic and interactive user interface.
+
+### Example of Firebase Firestore Integration:
+
+    ```javascript
+    // Firebase configuration
+const firebaseConfig = {
+  apiKey: 'your-api-key',
+  authDomain: 'your-auth-domain',
+  projectId: 'your-project-id',
+  storageBucket: 'your-storage-bucket',
+  messagingSenderId: 'your-messaging-sender-id',
+  appId: 'your-app-id',
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+// Access Firestore
+const db = firebase.firestore();
+```    
+
+
 ## Team Mates Details
 
 - **Ayush Munot**
-  - *Skills:* 
-  - *Background:* 
+  - *Skills:* Full-stack development (MERN), Python, Django, Flutter, React Native
+  - *Background:* Computer Science Engineering student, experienced in a wide range of technologies.
 
 - **Kunal Dhand**
-  - *Skills:* 
-  - *Background:* 
+  - *Skills:* Frontend development (React.js), Python, C/C++
+  - *Background:* Computer Science Engineering student, specializes in creating intuitive user interfaces.
 
 - **Lakshay Tyagi**
-  - *Skills:* 
-  - *Background:* 
+  - *Skills:* Frontend development (React.js), Node.js, Express, Java, Ruby on Rails
+  - *Background:* Computer Science Engineering student, experienced in both frontend and backend technologies.
 
 - **Shashank Gulati**
-  - *Skills:* 
-  - *Background:*
+  - *Skills:* Backend development (MERN stack)
+  - *Background:* Computer Science Engineering student, focused on backend technologies.
