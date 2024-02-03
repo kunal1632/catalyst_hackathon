@@ -81,7 +81,7 @@ One of the critical parts of our codebase is the integration with Firebase. Fire
 ## Team Mates Details
 
 - **Ayush Munot**
-  - *Skills:* Full-stack development (MERN), Python, Django, Flutter, React Native
+  - *Skills:* Full-stack development (MERN), Python, Django, Flutter, React Native, C/C++
   - *Background:* Computer Science Engineering student, experienced in a wide range of technologies.
 
 - **Kunal Dhand**
@@ -89,9 +89,9 @@ One of the critical parts of our codebase is the integration with Firebase. Fire
   - *Background:* Computer Science Engineering student, specializes in creating intuitive user interfaces.
 
 - **Lakshay Tyagi**
-  - *Skills:* Frontend development (React.js), Node.js, Express, Java, Ruby on Rails
+  - *Skills:* Frontend development (React.js), Node.js, Java
   - *Background:* Computer Science Engineering student, experienced in both frontend and backend technologies.
 
 - **Shashank Gulati**
-  - *Skills:* Backend development (MERN stack)
+  - *Skills:* Backend development (MERN stack), C/C++
   - *Background:* Computer Science Engineering student, focused on backend technologies.
