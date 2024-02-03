@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendPasswordResetEmail } from "firebase/auth";
+import { signInWithCredential, getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendPasswordResetEmail, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { handleFirebaseAuthException } from '../helpers/firebaseHelper';
 
 const AuthContext = createContext({});
@@ -87,6 +87,16 @@ export const AuthProvider = ({ children }) => {
         }).catch(() => alert("Please Try Again Later!"));
     }
 
+    const googleSignIn = () => {
+        const provider = new GoogleAuthProvider();
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                const user = result.user;
+                setUser(user);
+                window.location.replace('/');
+            }).catch(() => alert("Please Try Again Later!"));
+    }
+
     return (
         <AuthContext.Provider
             value={{
@@ -100,6 +110,7 @@ export const AuthProvider = ({ children }) => {
                 resetPassword,
                 login,
                 logout,
+                googleSignIn,
             }}>
             {children}
         </AuthContext.Provider>
