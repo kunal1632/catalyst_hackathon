@@ -4,19 +4,15 @@
 
 - **Ayush Munot**
   - *Role:* Full-stack Developer 
-  - *Contributions:* 
 
 - **Kunal Dhand**
   - *Role:* Frontend Developer
-  - *Contributions:* 
 
 - **Lakshay Tyagi**
   - *Role:* Frontend Developer
-  - *Contributions:* 
 
 - **Shashank Gulati**
   - *Role:* Backend Developer
-  - *Contributions:* 
 
 ## Tech Used
 
