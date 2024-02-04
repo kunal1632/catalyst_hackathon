@@ -93,7 +93,7 @@ export const AuthProvider = ({ children }) => {
             .then(async (result) => {
                 const user = result.user;
                 if (user) {
-                    await saveUserDataInFirebase();
+                    await saveUserDataInFirebase(user);
                     setUser(user);
                     window.location.replace('/');
                 }
