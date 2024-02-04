@@ -1,12 +1,17 @@
 import { MdEdit } from "react-icons/md";
 import React, { useState } from "react";
+import useAuth from "../../hooks/useAuth";
+import useProfile from "../../hooks/useProfile";
 
 const EditProfileSection = () => {
+  const { user } = useAuth();
+  const { } = useProfile();
+
   const [formData, setFormData] = useState({
-    email: "kunal.dk35@gmail.com",
-    firstName: "Kunal",
-    lastName: "Dhand",
-    userName: "kunaldhand",
+    email: user.email,
+    firstName: user.displayName?.split(" ")[0],
+    lastName: user.displayName?.split(" ")[1],
+    // userName: "kunaldhand",
     skills: ["C++", "MERN", "DSA"],
     dob: "2002-03-16",
   });
@@ -127,7 +132,7 @@ const EditProfileSection = () => {
         </div>
         <div className="flex items-center justify-between">
           <label className="w-1/3" htmlFor="skills">
-            SKills
+            Skills
           </label>
           <input
             className="bg-pink-100  w-full h-10 rounded-md p-5 text-LightPurple outline-LightPurple"

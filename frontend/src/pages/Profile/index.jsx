@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import About from "../../components/About";
 import YouMightKnow from "../../components/YouMightKnow";
 import Active from "../../components/Active";
-import { PostList } from "../../components/PostList";
+import { Post } from "../../components/Post";
 import { ProfileTabs } from "../../components/ProfileTabs";
 import NavBar from "../../components/NavBar";
 import YourProfile from "../../components/YourProfile";
@@ -21,6 +21,12 @@ export const Profile = () => {
   const [userData, setUserData] = useState({});
   const [userFollowers, setUserFollowers] = useState({});
   const [userFollowings, setUserFollowings] = useState([]);
+  const data = [
+    { "username": "Ayush Munot", "avatar": "/profile1.svg", text: "React is a free and open-source front-end JavaScript library for building user interfaces based on components.", image: "" },
+    { "username": "Ayush Munot", "avatar": "/profile2.svg", text: "JavaScript, often abbreviated as JS, is a programming language and core technology of the World Wide Web, alongside HTML and CSS." },
+    { "username": "Ayush Munot", "avatar": "/profile3.svg", text: "ES6 stands for ECMAScript 6. ECMAScript was created to standardize JavaScript, and ES6 is the 6th version of ECMAScript, it was published in 2015, and is also known as ECMAScript 2015.", },
+    { "username": "Ayush Munot", "avatar": "/profile3.svg", text: "ES6 stands for ECMAScript 6. ECMAScript was created to standardize JavaScript, and ES6 is the 6th version of ECMAScript, it was published in 2015, and is also known as ECMAScript 2015.", },
+  ];
 
   useEffect(() => {
     getUser(params.user_id).then((data) => setUserData(data)).catch((e) => console.log("err", e));
@@ -55,7 +61,10 @@ export const Profile = () => {
         </div>
         <div className="grid-area-e">
           <ProfileTabs />
-          <PostList />
+          {/* <PostList /> */}
+          <div className='post-list'>
+            {data.map((item, index) => <Post key={index} avatar={item.avatar} text={item.text} username={item.username} />)}
+          </div>
         </div>
         <div className="grid-area-f">
           <About />
