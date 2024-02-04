@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/catalyst_hackathon/static/css/main.d7013e56.css",
+    "main.js": "/catalyst_hackathon/static/js/main.21850b24.js",
+    "index.html": "/catalyst_hackathon/index.html",
+    "main.d7013e56.css.map": "/catalyst_hackathon/static/css/main.d7013e56.css.map",
+    "main.21850b24.js.map": "/catalyst_hackathon/static/js/main.21850b24.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7013e56.css",
+    "static/js/main.21850b24.js"
+  ]
+}
