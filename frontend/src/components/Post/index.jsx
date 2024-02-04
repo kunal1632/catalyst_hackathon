@@ -1,7 +1,7 @@
 import React from 'react'
 import './post.css'
 
-export const Post = ({ avatar, text, username }) => {
+export const Post = ({ avatar, text, username, postImage }) => {
   return (
     <div className='post-container py-2'>
       <div className='flex items-center'>
@@ -15,7 +15,7 @@ export const Post = ({ avatar, text, username }) => {
         </div>
       </div>
       <div className='post-image-container mt-4'>
-        <img src="/post-image.png" alt="post image" className='post-image' />
+        <img src={postImage} alt="post image" className='post-image' />
       </div>
       <div className='post-caption-container mt-4'>
         <p className='post-caption text-purple text-base'>
@@ -28,13 +28,13 @@ export const Post = ({ avatar, text, username }) => {
         <div className='action-btn-container flex items-center gap-1'>
           <img src="/favorite_border.svg" alt="" height={"21px"} width={"21px"} />
           <div className='action-btn-text text-purple text-base'>
-            1234
+            3
           </div>
         </div>
         <div className='action-btn-container flex items-center gap-1'>
           <img src="/chat_bubble_outline.svg" alt="" height={"21px"} width={"21px"} />
           <div className='action-btn-text text-purple text-base'>
-            1234
+            0
           </div>
         </div>
       </div>

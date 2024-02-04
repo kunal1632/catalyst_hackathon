@@ -11,7 +11,7 @@ import "./style.css";
 import useFollow from "../../hooks/useFollow";
 import useProfile from "../../hooks/useProfile";
 import useAuth from "../../hooks/useAuth";
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 export const Profile = () => {
   const { follow, unFollow, getFollowers, getFollowings } = useFollow();
@@ -22,28 +22,30 @@ export const Profile = () => {
   const [userFollowers, setUserFollowers] = useState({});
   const [userFollowings, setUserFollowings] = useState([]);
   const data = [
-    { "username": "Ayush Munot", "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLBGodj3Yyhs9GFxla0uRQ2EanYdJOMWMrQy4f18aYwoLY=s96-c", text: "React is a free and open-source front-end JavaScript library for building user interfaces based on components.", image: "" },
-    { "username": "Ayush Munot", "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLBGodj3Yyhs9GFxla0uRQ2EanYdJOMWMrQy4f18aYwoLY=s96-c", text: "JavaScript, often abbreviated as JS, is a programming language and core technology of the World Wide Web, alongside HTML and CSS." },
-    { "username": "Ayush Munot", "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLBGodj3Yyhs9GFxla0uRQ2EanYdJOMWMrQy4f18aYwoLY=s96-c", text: "ES6 stands for ECMAScript 6. ECMAScript was created to standardize JavaScript, and ES6 is the 6th version of ECMAScript, it was published in 2015, and is also known as ECMAScript 2015.", },
-    { "username": "Ayush Munot", "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLBGodj3Yyhs9GFxla0uRQ2EanYdJOMWMrQy4f18aYwoLY=s96-c", text: "ES6 stands for ECMAScript 6. ECMAScript was created to standardize JavaScript, and ES6 is the 6th version of ECMAScript, it was published in 2015, and is also known as ECMAScript 2015.", },
+    { "username": "Ayush Munot", "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLBGodj3Yyhs9GFxla0uRQ2EanYdJOMWMrQy4f18aYwoLY=s96-c", text: "React is a free and open-source front-end JavaScript library for building user interfaces based on components.", postImage: "/post-image2.png" },
+    { "username": "Ayush Munot", "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLBGodj3Yyhs9GFxla0uRQ2EanYdJOMWMrQy4f18aYwoLY=s96-c", text: "JavaScript, often abbreviated as JS, is a programming language and core technology of the World Wide Web, alongside HTML and CSS.", postImage: "/post-image3.jpeg" },
+    { "username": "Ayush Munot", "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLBGodj3Yyhs9GFxla0uRQ2EanYdJOMWMrQy4f18aYwoLY=s96-c", text: "ES6 stands for ECMAScript 6. ECMAScript was created to standardize JavaScript, and ES6 is the 6th version of ECMAScript, it was published in 2015, and is also known as ECMAScript 2015.", postImage: "/post-image2.png" },
+    { "username": "Ayush Munot", "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLBGodj3Yyhs9GFxla0uRQ2EanYdJOMWMrQy4f18aYwoLY=s96-c", text: "ES6 stands for ECMAScript 6. ECMAScript was created to standardize JavaScript, and ES6 is the 6th version of ECMAScript, it was published in 2015, and is also known as ECMAScript 2015.", postImage: "/post-image3.jpeg" },
   ];
 
   useEffect(() => {
-    getUser(params.user_id).then((data) => setUserData(data)).catch((e) => console.log("err", e));
+    getUser(params.user_id)
+      .then((data) => setUserData(data))
+      .catch((e) => console.log("err", e));
     getFollowers(params.user_id).then((data) => setUserFollowers(data));
     getFollowings(params.user_id).then((data) => setUserFollowings(data));
 
-    return () => { }
-  }, [])
+    return () => { };
+  }, []);
 
   const handleFollowUnfollow = async () => {
     if (userFollowers.isFollowing) {
       await unFollow(params.user_id);
     } else {
-      await follow(params.user_id)
+      await follow(params.user_id);
     }
     getFollowers(params.user_id).then((data) => setUserFollowers(data));
-  }
+  };
 
   console.log("userFollowers", userFollowers);
 
@@ -57,13 +59,18 @@ export const Profile = () => {
           <NavBar />
         </div>
         <div className="grid-area-c">
-          <YourProfile isMe={!params.user_id && params.user_id !== user.uid} user={userData} isFollowing={userFollowers.isFollowing} handleFollowUnfollow={handleFollowUnfollow} />
+          <YourProfile
+            isMe={!params.user_id && params.user_id !== user.uid}
+            user={userData}
+            isFollowing={userFollowers.isFollowing}
+            handleFollowUnfollow={handleFollowUnfollow}
+          />
         </div>
         <div className="grid-area-e">
           <ProfileTabs />
           {/* <PostList /> */}
           <div className='post-list'>
-            {data.map((item, index) => <Post key={index} avatar={item.avatar} text={item.text} username={item.username} />)}
+            {data.map((item, index) => <Post key={index} avatar={item.avatar} text={item.text} username={item.username} postImage={item.postImage} />)}
           </div>
         </div>
         <div className="grid-area-f">
