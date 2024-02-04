@@ -16,6 +16,7 @@ import LoginSignupPage from "./pages/Login&Signup";
 import Spinner from "./components/Spinner/Spinner";
 import EditProfile from "./pages/EditProfile";
 import PostPage from "./pages/PostPage";
+import NewPostMenu from "./components/StartPost/NewPostMenu";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCyqmu8JIZwO8VhOlvBUgNI7VaLlbZgufM",
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
   {
     path: "/post/",
     element: <PostPage />,
+  },
+  {
+    path: "/new-post",
+    element: <NewPostMenu />,
   },
 ]);
 
