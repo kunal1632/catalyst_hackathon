@@ -1,18 +1,41 @@
 import React from "react";
 import { IoMdPhotos, IoMdVideocam, IoMdText } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { FaFilePdf } from "react-icons/fa6";
+import { useState } from "react";
 
 const StartPost = () => {
+  const [FormData, setFormData] = useState({
+    content: "",
+    skill: "",
+  });
+  function changeHandler(event) {
+    const { name, value, type } = event.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  }
+
+  function submitHandler() {}
   return (
     <div className="w-full p-5 flex flex-col">
       <div className="flex mb-5">
-        <img width={50} className="mr-4" src="./profilePhoto.png"></img>
-        <Link
-          to={"/new-post"}
-          className="border-2 flex items-center pl-5 w-full rounded-3xl m-1 text-LightPurple"
-        >
-          Post a Skill...
-        </Link>
+        <img width={100} className="mr-4" src="./profilePhoto.png"></img>
+        <form className="w-full" onSubmit={submitHandler}>
+          <div className="w-full">
+            <textarea
+              type="text"
+              name="content"
+              id="content"
+              placeholder="What do you want to share ?"
+              onChange={changeHandler}
+              value={FormData.content}
+              className="outline-none placeholder-LightPurple placeholder-opacity-80 bg-richblack-5 mt-5 text-lg px-4 py-3 rounded-2xl w-full no-underline resize-none"
+            ></textarea>
+          </div>
+          {/* select skilll area */}
+        </form>
       </div>
 
       <div className="flex justify-evenly">
@@ -25,8 +48,8 @@ const StartPost = () => {
           <p>Video</p>
         </button>
         <button className="flex text-LightPurple items-center justify-center gap-1 border-l m-1 w-full">
-          <IoMdText />
-          <p>Artical</p>
+          <FaFilePdf />
+          <p>PDF</p>
         </button>
       </div>
     </div>
