@@ -8,7 +8,7 @@ const Sidebar = () => {
                 <img src="/logo.svg" width={50} height={50} className='ml-8 mt-8' alt="" />
             </div>
             <ul className='flex flex-col justify-center items-start pt-10 px-8 gap-10'>
-                <div className='flex flex-row gap-5 mr-5 cursor-pointer gradient-div'>
+                <div className='flex flex-row gap-5 mr-5 cursor-pointer '>
                     <img src="/HomeIcon.svg" width={20} height={20} alt="" />
                     <li className='text-white font-bold hover:text-orange transition-all duration-200'>Home</li>
                 </div>
