@@ -15,6 +15,12 @@ import { About } from "./pages/About";
 import LoginSignupPage from "./pages/Login&Signup";
 import { FollowProvider } from "./hooks/useFollow";
 import { ProfileProvider } from "./hooks/useProfile";
+import Spinner from "./components/Spinner/Spinner";
+import EditProfile from "./pages/EditProfile";
+import PostPage from "./pages/PostPage";
+import NewPostMenu from "./components/StartPost/NewPostMenu";
+
+import Chats from "./pages/Message"
 
 const firebaseConfig = {
   apiKey: "AIzaSyCyqmu8JIZwO8VhOlvBUgNI7VaLlbZgufM",
@@ -24,6 +30,7 @@ const firebaseConfig = {
   messagingSenderId: "116923088446",
   appId: "1:116923088446:web:35d3e0df15635e9451db6f",
 };
+
 
 const router = createBrowserRouter([
   {
@@ -50,6 +57,23 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />,
   },
+  {
+    path: "/edit-profile",
+    element: <EditProfile />,
+  },
+  {
+    path: "/post/",
+    element: <PostPage />,
+  },
+  {
+    path: "/new-post",
+    element: <NewPostMenu />,
+
+  },
+  {
+    path: "/chats",
+    element: <Chats />,
+  }
 ]);
 
 export const App = () => {
@@ -69,7 +93,7 @@ export const App = () => {
     }
   });
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <Spinner />;
 
   return (
     <div>

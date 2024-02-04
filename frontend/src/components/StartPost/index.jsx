@@ -1,14 +1,18 @@
 import React from "react";
 import { IoMdPhotos, IoMdVideocam, IoMdText } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const StartPost = () => {
   return (
     <div className="w-full p-5 flex flex-col">
       <div className="flex mb-5">
         <img width={50} className="mr-4" src="/profilePhoto.png"></img>
-        <button className="border-2 w-full rounded-3xl m-1 text-LightPurple">
+        <Link
+          to={"/new-post"}
+          className="border-2 flex items-center pl-5 w-full rounded-3xl m-1 text-LightPurple"
+        >
           Post a Skill...
-        </button>
+        </Link>
       </div>
 
       <div className="flex justify-evenly">
