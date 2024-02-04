@@ -5,7 +5,7 @@ const Sidebar = () => {
     return (
         <div className='bg-purple h-screen flex flex-col'>
             <div className=''>
-                <img src="logo.png" width={200} height={50} className='' alt="" />
+                <img src="/logo.svg" width={50} height={50} className='ml-8 mt-8' alt="" />
             </div>
             <ul className='flex flex-col justify-center items-start pt-10 px-8 gap-10'>
                 <div className='flex flex-row gap-5 mr-5 cursor-pointer gradient-div'>

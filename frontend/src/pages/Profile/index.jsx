@@ -10,11 +10,13 @@ import Sidebar from "../../components/Sidebar";
 import "./style.css";
 import useFollow from "../../hooks/useFollow";
 import useProfile from "../../hooks/useProfile";
+import useAuth from "../../hooks/useAuth";
 import { useParams } from 'react-router-dom';
 
 export const Profile = () => {
   const { follow, unFollow, getFollowers, getFollowings } = useFollow();
   const { getUser } = useProfile();
+  const { user } = useAuth();
   let params = useParams();
   const [userData, setUserData] = useState({});
   const [userFollowers, setUserFollowers] = useState({});
@@ -49,7 +51,7 @@ export const Profile = () => {
           <NavBar />
         </div>
         <div className="grid-area-c">
-          <YourProfile user={userData} isFollowing={userFollowers.isFollowing} handleFollowUnfollow={handleFollowUnfollow} />
+          <YourProfile isMe={!params.user_id && params.user_id !== user.uid} user={userData} isFollowing={userFollowers.isFollowing} handleFollowUnfollow={handleFollowUnfollow} />
         </div>
         <div className="grid-area-e">
           <ProfileTabs />

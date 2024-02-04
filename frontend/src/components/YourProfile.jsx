@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const YourProfile = ({ user = {}, isFollowing = false, handleFollowUnfollow = null }) => {
+const YourProfile = ({ user = {}, isFollowing = false, handleFollowUnfollow = null, isMe = false }) => {
   const name = user.displayName;
   const skills = "DSA MERN";
   return (
@@ -24,6 +25,11 @@ const YourProfile = ({ user = {}, isFollowing = false, handleFollowUnfollow = nu
         </div>
 
         <div className="flex items-center gap-3">
+          {isMe ?
+            <Link to={"/edit-profile/"} className=" bg-LightPurple text-white px-[2.5rem] py-[0.5rem] rounded-lg outline-none bottom-7 right-7 hover:scale-110 hover:opacity-95 transition-all duration-150">
+              Edit Profile
+            </Link>
+            : <>
           <button className="bg-LightPurple text-white rounded-full p-[0.5rem] outline-none bottom-7 right-7 hover:scale-110 hover:opacity-95 transition-all duration-150">
             {" "}
             <img width={23} src="/messageIcon.svg"></img>
@@ -34,6 +40,7 @@ const YourProfile = ({ user = {}, isFollowing = false, handleFollowUnfollow = nu
           <button className="bg-white text-LightPurple px-[1rem] py-[0.5rem] rounded-lg outline-none bottom-7 right-7 hover:scale-110 hover:opacity-95 transition-all duration-150 border border-LightPurple">
             Schedule a meeting
           </button>
+            </>}
         </div>
       </div>
     </div>

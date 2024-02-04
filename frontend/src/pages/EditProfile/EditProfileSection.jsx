@@ -35,7 +35,7 @@ const EditProfileSection = () => {
           >
             <MdEdit className="scale-125" />
           </button>
-          <img className="p-5" src="displayPhoto.png"></img>
+          <img className="p-5" src="/displayPhoto.png"></img>
         </div>
         <div className="flex flex-col justify-center ml-5">
           <p className="font-bold text-LightPurple text-xl">
