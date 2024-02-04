@@ -8,6 +8,7 @@ const EditProfileSection = () => {
     lastName: "Dhand",
     userName: "kunaldhand",
     skills: ["C++", "MERN", "DSA"],
+    dob: "2002-03-16",
   });
   function changeHandler(event) {
     setFormData((prevData) => ({
@@ -20,7 +21,6 @@ const EditProfileSection = () => {
       ...prevData,
       skills: event.target.value.split(","),
     }));
-    console.log(formData.skills);
   }
   function dpChangeHandler() {}
   function submitHandler() {}
@@ -60,7 +60,7 @@ const EditProfileSection = () => {
             First Name
           </label>
           <input
-            className="bg-pink-100 bg-transparent  w-full h-10 rounded-md p-5 text-LightPurple outline-LightPurple"
+            className="bg-pink-100    w-full h-10 rounded-md p-5 text-LightPurple outline-LightPurple"
             type="text"
             id="firstName"
             name="firstName"
@@ -74,7 +74,7 @@ const EditProfileSection = () => {
             Last Name
           </label>
           <input
-            className="bg-pink-100 bg-transparent  w-full h-10 rounded-md p-5 text-LightPurple outline-LightPurple"
+            className="bg-pink-100   w-full h-10 rounded-md p-5 text-LightPurple outline-LightPurple"
             type="text"
             id="lastName"
             name="lastName"
@@ -88,7 +88,7 @@ const EditProfileSection = () => {
             User Name
           </label>
           <input
-            className="bg-pink-100 bg-transparent  w-full h-10 rounded-md p-5 text-LightPurple outline-LightPurple"
+            className="bg-pink-100   w-full h-10 rounded-md p-5 text-LightPurple outline-LightPurple"
             type="text"
             id="userName"
             name="userName"
@@ -102,7 +102,7 @@ const EditProfileSection = () => {
             Email Address
           </label>
           <input
-            className="bg-pink-100 bg-transparent  w-full h-10 rounded-md p-5 text-LightPurple outline-LightPurple"
+            className="bg-pink-100  w-full h-10 rounded-md p-5 text-LightPurple outline-LightPurple"
             type="email"
             id="email"
             name="email"
@@ -112,11 +112,25 @@ const EditProfileSection = () => {
           ></input>
         </div>
         <div className="flex items-center justify-between">
+          <label className="w-1/3" htmlFor="dob">
+            Date of Birth
+          </label>
+          <input
+            className="bg-pink-100   w-full h-10 rounded-md p-5 text-LightPurple outline-LightPurple"
+            type="date"
+            id="dob"
+            name="dob"
+            placeholder={formData.dob}
+            value={formData.dob}
+            onChange={changeHandler}
+          ></input>
+        </div>
+        <div className="flex items-center justify-between">
           <label className="w-1/3" htmlFor="skills">
             SKills
           </label>
           <input
-            className="bg-pink-100 bg-transparent  w-full h-10 rounded-md p-5 text-LightPurple outline-LightPurple"
+            className="bg-pink-100  w-full h-10 rounded-md p-5 text-LightPurple outline-LightPurple"
             type="text"
             id="skills"
             name="skills"

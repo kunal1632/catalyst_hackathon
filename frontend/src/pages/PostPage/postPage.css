@@ -1,0 +1,74 @@
+/* pages/PostPage/postPage.css */
+
+.post-page-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.comment-section {
+  margin-top: 20px;
+}
+
+.comment {
+  margin-bottom: 8px;
+}
+
+.comment-username {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.comment-text {
+  color: #333;
+}
+
+.post-comment-container {
+  display: flex;
+  margin-top: 16px;
+}
+
+.post-comment-container input {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.post-comment-container button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Align with Post component styles */
+.post-container {
+  padding: 22px 44px;
+}
+
+.post-avatar {
+  height: 40px; /* Adjusted */
+  width: 40px; /* Adjusted */
+  border-radius: 9999px;
+  background-color: #FBB03B;
+}
+
+.post-username {
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25); /* Adjusted */
+}
+
+.post-image {
+  border-radius: 10px;
+  height: 256px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.post-container:nth-child(even) {
+  border-top: 0.5px solid #030229;
+  border-bottom: 0.5px solid #030229;
+}
