@@ -18,6 +18,8 @@ import EditProfile from "./pages/EditProfile";
 import PostPage from "./pages/PostPage";
 import NewPostMenu from "./components/StartPost/NewPostMenu";
 
+import Chats from "./pages/Message"
+
 const firebaseConfig = {
   apiKey: "AIzaSyCyqmu8JIZwO8VhOlvBUgNI7VaLlbZgufM",
   authDomain: "catalyst-c59d7.firebaseapp.com",
@@ -26,6 +28,7 @@ const firebaseConfig = {
   messagingSenderId: "116923088446",
   appId: "1:116923088446:web:35d3e0df15635e9451db6f",
 };
+
 
 const router = createBrowserRouter([
   {
@@ -59,7 +62,12 @@ const router = createBrowserRouter([
   {
     path: "/new-post",
     element: <NewPostMenu />,
+    
   },
+  {
+    path: "/chats",
+    element: <Chats />,
+  }
 ]);
 
 export const App = () => {
