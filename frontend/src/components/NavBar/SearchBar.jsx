@@ -17,7 +17,6 @@ const SearchBar = () => {
 
   function submitHandler(event) {
     event.preventDefault();
-    console.log(formData);
   }
   return (
     <div className="bg-white w-full rounded-lg h-[55px] flex items-center mr-5">

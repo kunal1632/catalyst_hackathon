@@ -5,7 +5,7 @@ const StartPost = () => {
   return (
     <div className="w-full p-5 flex flex-col">
       <div className="flex mb-5">
-        <img width={50} className="mr-4" src="./profilePhoto.png"></img>
+        <img width={50} className="mr-4" src="/profilePhoto.png"></img>
         <button className="border-2 w-full rounded-3xl m-1 text-LightPurple">
           Post a Skill...
         </button>

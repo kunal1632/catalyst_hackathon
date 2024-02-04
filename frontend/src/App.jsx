@@ -13,6 +13,8 @@ import { Profile } from "./pages/Profile";
 import { Contact } from "./pages/Contact";
 import { About } from "./pages/About";
 import LoginSignupPage from "./pages/Login&Signup";
+import { FollowProvider } from "./hooks/useFollow";
+import { ProfileProvider } from "./hooks/useProfile";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCyqmu8JIZwO8VhOlvBUgNI7VaLlbZgufM",
@@ -41,6 +43,10 @@ const router = createBrowserRouter([
     element: <Profile />,
   },
   {
+    path: "/profile/:user_id/",
+    element: <Profile />,
+  },
+  {
     path: "/",
     element: <Home />,
   },
@@ -54,13 +60,12 @@ export const App = () => {
   onAuthStateChanged(auth, (user) => {
     if (user) {
       const uid = user.uid;
-      console.log("uid", uid);
       setLoading(false);
     } else {
-      setLoading(false);
       if (!window.location.pathname.startsWith("/auth/")) {
         window.location.replace("/auth/");
       }
+      setLoading(false);
     }
   });
 
@@ -69,7 +74,11 @@ export const App = () => {
   return (
     <div>
       <AuthProvider>
-        <RouterProvider router={router} />
+        <ProfileProvider>
+          <FollowProvider>
+            <RouterProvider router={router} />
+          </FollowProvider>
+        </ProfileProvider>
       </AuthProvider>
     </div>
   );

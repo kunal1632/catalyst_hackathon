@@ -1,13 +1,14 @@
 import React, { createContext, useContext, useState } from 'react';
 import { signInWithCredential, getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendPasswordResetEmail, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { handleFirebaseAuthException } from '../helpers/firebaseHelper';
+import { collection, doc, setDoc, query, where, getDocs, getFirestore } from "firebase/firestore";
 
 const AuthContext = createContext({});
 
 export const AuthProvider = ({ children }) => {
     // const navigate = useNavigate();
     const auth = getAuth();
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState(auth.currentUser);
     const [isLoading, setIsLoading] = useState(false);
     const [isRegistering, setIsRegistering] = useState(false);
     const [loginErrors, setLoginErrors] = useState(null);
@@ -22,11 +23,11 @@ export const AuthProvider = ({ children }) => {
             return;
         }
         setIsLoading(true);
-        signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
+        signInWithEmailAndPassword(auth, email, password).then(async (userCredential) => {
             const user = userCredential.user;
             if (user) {
+                await saveUserDataInFirebase(user);
                 setUser(user);
-                // navigate('/', { replace: true });
                 window.location.replace('/');
             }
         }).catch(error => {
@@ -62,15 +63,14 @@ export const AuthProvider = ({ children }) => {
             return;
         }
         setIsRegistering(true);
-        createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
+        createUserWithEmailAndPassword(auth, email, password).then(async (userCredential) => {
             const user = userCredential.user;
             if (user) {
+                await saveUserDataInFirebase();
                 setUser(user);
-                // navigate('/', { replace: true });
                 window.location.replace('/');
             }
         }).catch((error) => {
-            console.log("f", Object.values(error));
             setRegisterErrors(handleFirebaseAuthException(error.code));
         }).finally(() => {
             setIsRegistering(false);
@@ -90,11 +90,23 @@ export const AuthProvider = ({ children }) => {
     const googleSignIn = () => {
         const provider = new GoogleAuthProvider();
         signInWithPopup(auth, provider)
-            .then((result) => {
+            .then(async (result) => {
                 const user = result.user;
-                setUser(user);
-                window.location.replace('/');
+                if (user) {
+                    await saveUserDataInFirebase();
+                    setUser(user);
+                    window.location.replace('/');
+                }
             }).catch(() => alert("Please Try Again Later!"));
+    }
+
+    const saveUserDataInFirebase = async (user) => {
+        return await setDoc(doc(collection(getFirestore(), "users"), user.uid), {
+            displayName: user.displayName,
+            uid: user.uid,
+            email: user.email,
+            photoURL: user.photoURL,
+        });
     }
 
     return (

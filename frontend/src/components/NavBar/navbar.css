@@ -2,4 +2,5 @@
     display: inline-block;
     height: 60px;
     width: 60px;
+    border-radius: 9999px;
 }
