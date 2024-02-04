@@ -14,7 +14,7 @@ export const FollowProvider = ({ children }) => {
     const { user } = useAuth();
 
     const getFollowings = async (user_id) => {
-        const q = query(followRef.current, where("user_id", "==", user_id));
+        const q = query(followRef.current, where("user_id", "==", user_id ? user_id : user.uid));
         const querySnapshot = await getDocs(q);
         let followings = [];
         querySnapshot.forEach((doc) => {
@@ -25,7 +25,7 @@ export const FollowProvider = ({ children }) => {
     }
 
     const getFollowers = async (user_id) => {
-        const q = query(followRef.current, where("following", "==", user_id));
+        const q = query(followRef.current, where("following", "==", user_id ? user_id : user.uid));
         const querySnapshot = await getDocs(q);
         let followers = [], isFollowing;
         querySnapshot.forEach((doc) => {
@@ -42,6 +42,7 @@ export const FollowProvider = ({ children }) => {
     }
 
     const follow = async (user_id) => {
+        console.log("first", `${user.uid}${user_id}`);
         try {
             await setDoc(doc(followRef.current, `${user.uid}${user_id}`), {
                 user_id: user.uid,

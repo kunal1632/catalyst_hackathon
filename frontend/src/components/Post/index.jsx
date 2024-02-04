@@ -1,13 +1,13 @@
 import React from 'react'
 import './post.css'
 
-export const Post = () => {
+export const Post = ({ avatar, text, username }) => {
   return (
     <div className='post-container py-2'>
       <div className='flex items-center'>
-        <img src='/avatar.png' className='post-avatar' />
+        <img src={avatar} className='post-avatar' />
         <div className='grow mx-2.5'>
-          <div className='text-purple font-bold text-base post-username'>Ayush Munot</div>
+          <div className='text-purple font-bold text-base post-username'>{username}</div>
           <div className='text-purple text-[10px]'>5mins ago</div>
         </div>
         <div>
@@ -19,9 +19,9 @@ export const Post = () => {
       </div>
       <div className='post-caption-container mt-4'>
         <p className='post-caption text-purple text-base'>
-          <strong>Ayush Munot</strong>
+          <strong>{username}</strong>
           {" "}
-          Lorem ipsum dolor sit amet consectetur adipisicing.
+          {text}
         </p>
       </div>
       <div className='action-container mt-4 flex items-center gap-4'>

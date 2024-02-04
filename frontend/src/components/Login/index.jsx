@@ -10,7 +10,7 @@ const LogIn = () => {
 
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    email: "ayushjain1953@gmail.com", password: "Qwerty@123",
+    email: "", password: "",
   })
 
   function submitHandler(e) {

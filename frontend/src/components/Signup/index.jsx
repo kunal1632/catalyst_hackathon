@@ -13,11 +13,11 @@ const SignUp = () => {
     const { isRegistering, register, registerErrors, googleSignIn } = useAuth();
 
     const [formData, setFormData] = useState({
-        firstName: "Ayush",
-        lastName: "Munot",
-        email: "ayushjain1953@gmail.com",
-        password: "Qwerty@123",
-        confirmPassword: "Qwerty@123",
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
     })
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
