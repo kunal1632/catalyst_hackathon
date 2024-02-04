@@ -9,6 +9,8 @@ import { Profile } from "./pages/Profile";
 import { Contact } from "./pages/Contact";
 import { About } from "./pages/About";
 import LoginSignupPage from "./pages/Login&Signup";
+import PostPage  from "./pages/PostPage";
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyCyqmu8JIZwO8VhOlvBUgNI7VaLlbZgufM",
@@ -39,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/post/",
+    element: <PostPage />,
   },
 ]);
 
