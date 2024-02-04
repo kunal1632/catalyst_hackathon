@@ -66,7 +66,7 @@ export const AuthProvider = ({ children }) => {
         createUserWithEmailAndPassword(auth, email, password).then(async (userCredential) => {
             const user = userCredential.user;
             if (user) {
-                await saveUserDataInFirebase();
+                await saveUserDataInFirebase(user);
                 setUser(user);
                 window.location.replace('/');
             }
