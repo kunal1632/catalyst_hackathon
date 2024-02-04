@@ -1,5 +1,5 @@
 export const handleFirebaseAuthException = (code) => {
-    code = code.replace("auth/", "");
+    code = code?.replace("auth/", "");
     switch (code) {
         case 'email-already-in-use':
             return 'The email address is already registered. Please use a different email.';
